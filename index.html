@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
-  
+
+  <!-- ✅ ADD THIS LINE RIGHT HERE -->
   <meta name="google-site-verification" content="NgxJp6FmTKml1Jih3Yo06y0lA6CNKxRE3NnR3Ad-dL4" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +10,10 @@
   <link rel="icon" href="https://img.icons8.com/emoji/96/rocket.png">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- 🌌 STAR BACKGROUND -->
 <canvas id="bg"></canvas>
-
-<!-- 🌌 WARP LAYER -->
 <canvas id="warp"></canvas>
 
 <!-- 🌌 WELCOME -->
@@ -29,28 +26,39 @@
   </div>
 </div>
 
+<!-- 🆕 WHATS NEW PANEL -->
+<div id="whatsNew">
+  <div class="panel">
+    <h2>🚀 What's New?</h2>
+    <ul>
+      <li>Added game icons 🎮</li>
+      <li>New UI layout ✨</li>
+      <li>Improved navigation 🚀</li>
+    </ul>
+    <button onclick="closeWhatsNew()">Got it</button>
+  </div>
+</div>
+
 <!-- APP -->
 <div id="app" style="display:none;">
 
-  <div class="topbar">
-    <input id="searchInput" placeholder="Search games..." />
-    <button onclick="handleSearch()">Search</button>
+  <div class="sidebar">
+    <button onclick="route('home')">🏠</button>
+    <button onclick="route('games')">🎮</button>
+    <button onclick="route('search')">🔍</button>
+    <button onclick="route('about')">ℹ️</button>
   </div>
 
-  <!-- HOME ICON GRID -->
-  <div id="homeIcons" class="icon-grid"></div>
+  <div class="main">
 
-  <!-- PAGE VIEW -->
-  <div id="view" class="page"></div>
+    <div class="topbar">
+      <input id="searchInput" placeholder="Search games..." />
+      <button onclick="handleSearch()">Search</button>
+    </div>
 
-  <!-- NAV -->
-  <div class="bottomnav">
-    <button onclick="route('home')">Home</button>
-    <button onclick="route('games')">Games</button>
-    <button onclick="route('search')">Search</button>
-    <button onclick="route('about')">About</button>
+    <div id="view" class="page"></div>
+
   </div>
-
 </div>
 
 <!-- GAME PLAYER -->
@@ -59,10 +67,9 @@
     <h2 id="gameTitle"></h2>
     <button onclick="exitGame()">Exit</button>
   </div>
-
   <iframe id="gameFrame"></iframe>
 </div>
 
 <script src="script.js"></script>
 </body>
-</html>
+</html>  
