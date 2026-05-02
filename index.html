@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Hub</title>
+
+  <link rel="icon" href="https://img.icons8.com/emoji/96/rocket.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🌌 STAR BACKGROUND -->
+<canvas id="bg"></canvas>
+
+<!-- 🌌 WARP LAYER -->
+<canvas id="warp"></canvas>
+
+<!-- 🌌 WELCOME -->
+<div id="welcome">
+  <div class="welcome-card">
+    <div class="orb"></div>
+    <h1>SPACE HUB</h1>
+    <p>Enter your universe</p>
+    <button onclick="enterSite()">ENTER</button>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app" style="display:none;">
+
+  <div class="topbar">
+    <input id="searchInput" placeholder="Search games..." />
+    <button onclick="handleSearch()">Search</button>
+  </div>
+
+  <!-- HOME ICON GRID -->
+  <div id="homeIcons" class="icon-grid"></div>
+
+  <!-- PAGE VIEW -->
+  <div id="view" class="page"></div>
+
+  <!-- NAV -->
+  <div class="bottomnav">
+    <button onclick="route('home')">Home</button>
+    <button onclick="route('games')">Games</button>
+    <button onclick="route('search')">Search</button>
+    <button onclick="route('about')">About</button>
+  </div>
+
+</div>
+
+<!-- GAME PLAYER -->
+<div id="playmode">
+  <div id="gameHeader">
+    <h2 id="gameTitle"></h2>
+    <button onclick="exitGame()">Exit</button>
+  </div>
+
+  <iframe id="gameFrame"></iframe>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

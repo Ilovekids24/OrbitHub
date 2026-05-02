@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cookie Clicker</title>
+</head>
+<body style="margin:0; background:#222; color:white; text-align:center; font-family:sans-serif;">
+
+  <h1>🍪 Cookie Clicker</h1>
+
+  <img id="cookie" src="https://img.icons8.com/emoji/200/cookie-emoji.png" style="cursor:pointer;">
+
+  <h2>Cookies: <span id="count">0</span></h2>
+
+  <script>
+    let count = 0;
+
+    document.getElementById("cookie").onclick = () => {
+      count++;
+      document.getElementById("count").innerText = count;
+    };
+  </script>
+
+</body>
+</html>
